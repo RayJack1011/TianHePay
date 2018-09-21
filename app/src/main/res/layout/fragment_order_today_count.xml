@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fadingEdge="none"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/Material.Standard.Double"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_primary_dark"
+                android:layout_gravity="center_vertical"
+                android:text="交易日期:"
+                android:textSize="18sp"
+                />
+            <!--<android.support.v7.widget.CardView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--app:cardBackgroundColor="@color/btn_blue"-->
+                <!--android:layout_marginLeft="@dimen/Material.Standard.Double"-->
+                <!--app:cardCornerRadius="10dp"-->
+                <!--app:cardElevation="5dp"-->
+                <!--&gt;-->
+                <Button
+                    android:id="@+id/fragment_order_count_date"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/button_height_min"
+                    android:layout_gravity="bottom"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:text="2012-08-26"
+                    />
+            <ImageView
+                android:id="@+id/fragment_order_count_date1"
+                android:layout_width="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_date"/>
+            <!--</android.support.v7.widget.CardView>-->
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/Material.Standard"
+                android:paddingTop="@dimen/Material.Standard"
+                android:text="销售数量:"
+                android:textColor="@color/text_primary_dark"/>
+
+            <TextView
+                android:id="@+id/fragment_order_today_sale_count"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/Material.Standard.Triple"
+                android:layout_marginRight="@dimen/Material.Standard.Triple"
+                android:layout_weight="1.0"
+                android:paddingBottom="@dimen/Material.Standard"
+                android:paddingTop="@dimen/Material.Standard"
+                android:text="0单"
+                android:textColor="@color/text_primary_dark"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/Material.Standard"
+                android:paddingTop="@dimen/Material.Standard"
+                android:text="销售总额:"
+                android:textColor="@color/text_primary_dark"/>
+
+            <TextView
+                android:id="@+id/fragment_order_today_sale_total"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/Material.Standard.Triple"
+                android:layout_marginRight="@dimen/Material.Standard.Triple"
+                android:layout_weight="1.0"
+                android:paddingBottom="@dimen/Material.Standard"
+                android:paddingTop="@dimen/Material.Standard"
+                android:text="0.00"
+                android:textColor="@color/text_primary_dark"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/Material.Standard"
+                android:paddingTop="@dimen/Material.Standard"
+                android:text="退货数量:"
+                android:textColor="@color/text_primary_dark"/>
+
+            <TextView
+                android:id="@+id/fragment_order_today_refund_count"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/Material.Standard.Triple"
+                android:layout_marginRight="@dimen/Material.Standard.Triple"
+                android:layout_weight="1.0"
+                android:paddingBottom="@dimen/Material.Standard"
+                android:paddingTop="@dimen/Material.Standard"
+                android:text="0单"
+                android:textColor="@color/text_primary_dark"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/Material.Standard"
+                android:paddingTop="@dimen/Material.Standard"
+                android:text="退货总额:"
+                android:textColor="@color/text_primary_dark"/>
+
+            <TextView
+                android:id="@+id/fragment_order_today_refund_totals"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/Material.Standard.Triple"
+                android:layout_marginRight="@dimen/Material.Standard.Triple"
+                android:layout_weight="1.0"
+                android:paddingBottom="@dimen/Material.Standard"
+                android:paddingTop="@dimen/Material.Standard"
+                android:text="0.00"
+                android:textColor="@color/text_primary_dark"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#FF656565"
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text.Material.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总营业额:"/>
+
+            <TextView
+                android:id="@+id/fragment_order_today_totals"
+                style="@style/Text.Material.Headline"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/Material.Standard.Triple"
+                android:layout_marginRight="@dimen/Material.Standard.Triple"
+                android:layout_weight="1.0"
+                android:text="0.00"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/Material.Standard"
+                android:paddingTop="@dimen/Material.Standard"
+                android:text="类型"
+                android:textSize="@dimen/TextSize.Material.Body"
+                />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/Material.Standard"
+                android:paddingTop="@dimen/Material.Standard"
+                android:text="消费"
+                android:textSize="@dimen/TextSize.Material.Body"
+                />
+            <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/Material.Standard"
+            android:paddingTop="@dimen/Material.Standard"
+            android:text="退款"
+            android:textSize="@dimen/TextSize.Material.Body"
+            />
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/Material.Standard"
+                android:paddingTop="@dimen/Material.Standard"
+                android:text="小计"
+                android:textSize="@dimen/TextSize.Material.Body"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_order_statistics_payments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="42.0dip"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="Material.Standard">8dp</dimen>
+    <dimen name="Material.Standard.Half">4dp</dimen>
+    <dimen name="Material.Standard.Double">16dp</dimen>
+    <dimen name="Material.Standard.Triple">24dp</dimen>
+    <dimen name="Material.Standard.Quadruple">32dp</dimen>
+    <dimen name="Material.Standard.Quintuple">40dp</dimen>
+    <dimen name="Material.Standard.Sextuple">48dp</dimen>
+    <dimen name="Material.Standard.Octuple">64dp</dimen>
+
+    <dimen name="TextSize.Material.Body">14sp</dimen>
+    <dimen name="TextSize.Material.Caption">12sp</dimen>
+    <dimen name="TextSize.Material.Display1">34sp</dimen>
+    <dimen name="TextSize.Material.Display2">45sp</dimen>
+    <dimen name="TextSize.Material.Display3">56sp</dimen>
+    <dimen name="TextSize.Material.Display4">112sp</dimen>
+    <dimen name="TextSize.Material.Headline">24sp</dimen>
+    <dimen name="TextSize.Material.Subhead">16sp</dimen>
+    <dimen name="TextSize.Material.Title">20sp</dimen>
+
+    <dimen name="Stroke_Width_1">1dp</dimen>
+
+    <dimen name="button_height_min">48dp</dimen>
+    <dimen name="button_height_Large">56dp</dimen>
+
+
+    <dimen name="drawer_width">240dp</dimen>
+
+    <!-- 用于适配android:lineSpacingExtra属性在android5.0以上的区别 -->
+    <dimen name="line_spacing_extra">0dp</dimen>
+
+    <!-- marin -->
+    <dimen name="marin_button_padding">@dimen/Material.Standard.Double</dimen>
+    <dimen name="marin_gap_padding">@dimen/Material.Standard.Double</dimen>
+    <dimen name="marin_text_headline">31sp</dimen>
+
+
+    <!-- keypad panel -->
+    <dimen name="keypad_horizontal_divider_padding">8dp</dimen>
+    <dimen name="keypad_letters_text_size">13sp</dimen>
+    <dimen name="keypad_letters_text_size_small">10sp</dimen>
+    <dimen name="pinpad_text_size">20.0sp</dimen>
+    <dimen name="pinpad_text_size_small">20sp</dimen>
+    <dimen name="keypad_text_size">32.0sp</dimen>
+    <dimen name="keypad_text_size_small">26sp</dimen>
+    <dimen name="marin_glyph_font_size">50dp</dimen>
+    <dimen name="keypad_line_spacing_extra">5dp</dimen>
+    <dimen name="keypad_top_bar_height">56dp</dimen>
+
+    <dimen name="size_10sp">10sp</dimen>
+    <dimen name="size_11sp">11sp</dimen>
+    <dimen name="size_12sp">12sp</dimen>
+    <dimen name="size_13sp">13sp</dimen>
+    <dimen name="size_14sp">14sp</dimen>
+    <dimen name="size_15sp">15sp</dimen>
+    <dimen name="size_16sp">16sp</dimen>
+    <dimen name="size_17sp">17sp</dimen>
+    <dimen name="size_18sp">18sp</dimen>
+    <dimen name="size_19sp">19sp</dimen>
+    <dimen name="size_20sp">20sp</dimen>
+    <dimen name="size_1px">1px</dimen>
+
+</resources>

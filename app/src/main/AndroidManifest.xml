@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tianhe.pay">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 扫描权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 新大陆N900设备使用权限 -->
+    <uses-permission android:name="android.permission.MANAGE_NEWLAND" />
+
+    <application
+        android:name=".TianHeApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.welcome.WelcomeActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.checkout.CheckoutActivity" />
+        <activity android:name=".ui.payment.PayActivity" />
+        <activity
+            android:name=".ui.crm.QueryCrmActivity"
+            android:theme="@style/Activity.Dialog" />
+        <activity android:name=".ui.cart.CartActivity" />
+        <activity android:name=".ui.cart.CartDetailActivity" />
+        <activity android:name=".ui.order.OrderHistoryActivity" />
+        <activity android:name=".ui.order.OrderHistoryDetailActivity" />
+        <activity android:name=".ui.order.OrderQueryActivity" />
+        <activity android:name=".ui.setting.SettingActivity" />
+        <activity android:name=".ui.refund.RefundOrderActivity" />
+        <activity android:name=".ui.order.OrderCountActivity" />
+        <activity
+            android:name=".ui.refund.RefundPayActivity"
+            android:theme="@style/Activity.Dialog" />
+        <activity
+            android:name=".ui.auth.QueryAuthActivity"
+            android:theme="@style/Activity.Dialog" />
+        <activity android:name=".ui.wechatalireprint.WechatAliQueryActivity" />
+        <activity android:name=".ui.wechatalireprint.WechatAliReprintActivity" />
+        <activity android:name=".ui.wechatalireprint.WechatAliQuerySelectorActivity" />
+        <activity android:name=".ui.modify.ModifyActivity" />
+        <activity android:name=".ui.returncoupon.ReturnCouponActivity"></activity>
+    </application>
+
+</manifest>

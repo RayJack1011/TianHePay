@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_active="false" android:state_pressed="true" android:drawable="@color/skip_color_bg_pressed" />
+    <item android:state_active="false" android:drawable="@color/skip_color_bg" />
+    <item android:state_enabled="false" android:state_active="true" android:drawable="@color/check_color_bg_disabled" />
+    <item android:state_enabled="true" android:state_active="true" android:drawable="@color/check_color_bg_actived" />
+    <item android:drawable="@color/skip_color_bg" />
+</selector>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white_nearby"
+    android:divider="@android:drawable/divider_horizontal_bright"
+    android:minWidth="300dp"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/Material.Standard.Quadruple"
+        android:paddingRight="@dimen/Material.Standard.Quadruple">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/Material.Standard.Double"
+            android:layout_marginTop="@dimen/Material.Standard.Double">
+
+            <TextView
+                android:id="@+id/fragment_refund_pay_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/button_height_min"
+                android:text="现金退款"
+                android:textColor="@color/text_primary_dark"
+                android:textSize="@dimen/TextSize.Material.Title"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/fragment_refund_pay_scan"
+                android:layout_width="@dimen/button_height_min"
+                android:layout_height="@dimen/button_height_min"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_scan"
+                android:gravity="center"
+                android:text="扫码"
+                android:textColor="@color/text_primary_dark"
+                android:textSize="@dimen/TextSize.Material.Title"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:gravity="center_vertical"
+                android:text="可退金额："
+                android:textColor="@color/text_primary_dark"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/fragment_refund_pay_amount"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:inputType="numberDecimal"
+                android:gravity="center_vertical"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_refund_pay_amount_input_container"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退款金额:"
+                android:textColor="@color/text_primary_dark" />
+
+            <EditText
+                android:id="@+id/fragment_refund_pay_amount_input"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginLeft="@dimen/Material.Standard"
+                android:layout_marginRight="@dimen/Material.Standard"
+                android:gravity="center_vertical"
+                android:hint="请输入退款金额"
+                android:inputType="numberDecimal"
+                android:textColor="@color/text_primary_dark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_refund_rel_no_container"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关联号码"
+                android:textColor="@color/text_primary_dark" />
+
+            <EditText
+                android:id="@+id/fragment_refund_rel_No"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="@dimen/Material.Standard"
+                android:layout_marginRight="@dimen/Material.Standard"
+                android:hint="请输入号码"
+                android:imeOptions="actionDone"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layouts"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/today_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/today_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/choice_un" />
+
+                <TextView
+                    android:id="@+id/today_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/today_return"
+                    android:textColor="@color/text_light"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/yesterday_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/yesterday_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/choice_un" />
+
+                <TextView
+                    android:id="@+id/yesterday_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/yesterday_return"
+                    android:textColor="@color/text_light"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/fragment_refund_query_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/Material.Standard.Double"
+        android:layout_marginLeft="@dimen/Material.Standard.Quadruple"
+        android:layout_marginRight="@dimen/Material.Standard.Quadruple"
+        android:layout_marginTop="@dimen/Material.Standard.Double"
+        android:background="@drawable/bg_corner"
+        android:text="退款"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/TextSize.Material.Headline" />
+
+</LinearLayout>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    >
+
+                    <TextView
+                        style="@style/OrderHistoryDetail.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="14sp"
+                        android:text="交易单号："/>
+
+                    <TextView
+                        android:id="@+id/order_detail_saleNo"
+                        style="@style/OrderHistoryDetail.Body"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_height="match_parent"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    >
+
+                    <TextView
+                        style="@style/OrderHistoryDetail.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="14sp"
+                        android:text="订单总额："/>
+
+                    <TextView
+                        android:id="@+id/order_detail_total"
+                        style="@style/OrderHistoryDetail.Body"
+                        android:layout_width="0dp"
+                        android:textSize="14sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        style="@style/OrderHistoryDetail.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="14sp"
+                        android:text="交易折扣："/>
+
+                    <TextView
+                        android:id="@+id/order_detail_discount"
+                        style="@style/OrderHistoryDetail.Body"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:visibility="visible"
+                    >
+
+                    <TextView
+                        style="@style/OrderHistoryDetail.Label"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_height="match_parent"
+                        android:text="操  作  员："/>
+
+                    <TextView
+                        android:id="@+id/order_detail_casher"
+                        style="@style/OrderHistoryDetail.Body"
+                        android:layout_width="0dp"
+                        android:textSize="14sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        style="@style/OrderHistoryDetail.Label"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_height="match_parent"
+                        android:text="终端编号："/>
+
+                    <TextView
+                        android:id="@+id/order_detail_posId"
+                        style="@style/OrderHistoryDetail.Body"
+                        android:layout_width="0dp"
+                        android:textSize="14sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    >
+
+                    <TextView
+                        style="@style/OrderHistoryDetail.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="14sp"
+                        android:text="销售积分："/>
+
+                    <TextView
+                        android:id="@+id/order_detail_points"
+                        style="@style/OrderHistoryDetail.Body"
+                        android:layout_width="0dp"
+                        android:textSize="14sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        style="@style/OrderHistoryDetail.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="14sp"
+                        android:text="会员卡号："/>
+
+                    <TextView
+                        android:id="@+id/order_detail_vipNo"
+                        style="@style/OrderHistoryDetail.Body"
+                        android:layout_width="0dp"
+                        android:textSize="14sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    >
+
+                    <TextView
+                        style="@style/OrderHistoryDetail.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="14sp"
+                        android:text="交易类型："/>
+
+                    <TextView
+                        android:id="@+id/order_detail_saleType"
+                        style="@style/OrderHistoryDetail.Body"
+                        android:layout_width="0dp"
+                        android:textSize="14sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_blue"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    >
+
+                    <TextView
+                        style="@style/OrderHistoryDetail.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="14sp"
+                        android:text="交易时间："/>
+
+                    <TextView
+                        android:id="@+id/order_detail_time"
+                        style="@style/OrderHistoryDetail.Body"
+                        android:layout_width="0dp"
+                        android:textSize="14sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingBottom="@dimen/Material.Standard"
+                    android:paddingLeft="@dimen/Material.Standard.Double"
+                    android:paddingRight="@dimen/Material.Standard.Double"
+                    android:paddingTop="@dimen/Material.Standard"
+                    android:background="@color/white_gray"
+                    android:text="商品列表"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/fragment_refund_detail_itemList_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/Material.Standard.Double"
+                    android:paddingRight="@dimen/Material.Standard.Double"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/white_gray"
+                    android:paddingBottom="@dimen/Material.Standard"
+                    android:paddingLeft="@dimen/Material.Standard.Double"
+                    android:paddingRight="@dimen/Material.Standard.Double"
+                    android:paddingTop="@dimen/Material.Standard"
+                    android:text="支付方式"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/fragment_refund_detail_paidList_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/Material.Standard.Double"
+                    android:paddingRight="@dimen/Material.Standard.Double"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/fragment_refund_detail_ok_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height_min"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:minWidth="300dp"
+        android:paddingBottom="@dimen/Material.Standard"
+        android:paddingTop="@dimen/Material.Standard"
+        android:text="确认退货"
+        android:textColor="@color/text_blue"
+        android:background="@drawable/bg_corner"
+        android:visibility="gone"
+        />
+</LinearLayout>

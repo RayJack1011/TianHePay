@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_drawer_home"
+        android:title="@string/drawer_left_home" />
+    <item
+        android:id="@+id/nav_bill_history"
+        android:icon="@drawable/ic_drawer_bill_history"
+        android:title="@string/drawer_left_bill_history" />
+    <item
+        android:id="@+id/nav_today_statistics"
+        android:icon="@drawable/ic_drawer_today_statistics"
+        android:title="@string/drawer_left_today_statistics" />
+    <item
+        android:id="@+id/nav_refund"
+        android:visible="false"
+        android:icon="@drawable/ic_drawer_refund"
+        android:title="@string/drawer_left_refund"
+        />
+    <item
+        android:id="@+id/nav_reprint"
+        android:icon="@drawable/ic_drawer_reprint"
+        android:title="@string/drawer_left_reprint" />
+    <item
+        android:id="@+id/nav_single"
+        android:visible="false"
+        android:icon="@drawable/ic_drawer_reprint"
+        android:title="@string/drawer_single" />
+    <item
+        android:id="@+id/nav_single_coupon"
+        android:visible="false"
+        android:icon="@drawable/ic_drawer_reprint"
+        android:title="@string/drawer_single_coupon" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_drawer_settings"
+        android:title="@string/drawer_left_settings" />
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/ic_drawer_about"
+        android:visible="false"
+        android:title="@string/drawer_left_about" />
+</menu>

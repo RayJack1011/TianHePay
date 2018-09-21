@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Padlock">
+        <attr name="tabletMode" format="boolean" />
+        <attr name="pinMode" format="boolean" />
+        <attr name="drawLeftLine" format="boolean" />
+        <attr name="drawRightLine" format="boolean" />
+        <attr name="drawTopLine" format="boolean" />
+        <attr name="drawBottomLine" format="boolean" />
+        <attr name="horizontalDividerStyle" format="boolean" />
+        <attr name="showDecimal" format="boolean" />
+        <attr name="submitType">
+            <enum name="none" value="0" />
+            <enum name="add" value="1" />
+            <enum name="check" value="2" />
+            <enum name="invisible" value="3" />
+        </attr>
+        <attr name="deleteType">
+            <enum name="clear_glyph" value="0" />
+            <enum name="backspace_glyph" value="2" />
+            <enum name="clear_text" value="1" />
+        </attr>
+        <attr name="lettersTextSize" format="reference|dimension" />
+        <attr name="buttonTextSize" format="reference|dimension" />
+        <attr name="buttonSelector" format="reference" />
+        <attr name="submitSelector" format="reference" />
+        <attr name="backspaceSelector" format="reference" />
+        <attr name="lineColor" format="reference|color" />
+        <attr name="digitColor" format="reference|color" />
+        <attr name="digitDisabledColor" format="reference|color" />
+        <attr name="submitColor" format="reference|color" />
+        <attr name="submitDisabledColor" format="reference|color" />
+        <attr name="clearTextColor" format="reference|color" />
+        <attr name="clearTextDisabledColor" format="reference|color" />
+        <attr name="backspaceColor" format="reference|color" />
+        <attr name="backspaceDisabledColor" format="reference|color" />
+        <attr name="pinSubmitColor" format="reference|color" />
+        <attr name="pinSubmitDisabledColor" format="reference|color" />
+        <attr name="lettersColor" format="reference|color" />
+        <attr name="lettersDisabledColor" format="reference|color" />
+        <attr name="lineSpacingExtra" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CenteredFrameLayout_LayoutParams">
+        <attr name="centerOffsetLeft" format="reference|dimension"/>
+    </declare-styleable>
+</resources>

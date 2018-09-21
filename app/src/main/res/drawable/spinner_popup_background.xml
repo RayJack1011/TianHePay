@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list android:opacity="translucent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <nine-patch android:src="@drawable/abc_popup_background_mtrl_mult" />
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/white" />
+            <padding android:top="8.0dip" android:bottom="8.0dip" />
+            <corners android:radius="3.0dip" />
+        </shape>
+    </item>
+</layer-list>

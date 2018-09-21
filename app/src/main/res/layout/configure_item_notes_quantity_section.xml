@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<com.squareup.marketfont.MarketTextView-->
+        <!--android:id="@id/notes_and_quantity_section_header"-->
+        <!--style="@style/Widget.Marin.TextView.SectionHeader.GutterHalf"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/uppercase_cart_note_and_quantity_header"/>-->
+
+    <!--<com.squareup.ui.XableEditText-->
+        <!--android:id="@id/configure_item_note"-->
+        <!--style="@style/Widget.XableEditText.Margin.GutterHalf"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="@string/add_description"-->
+        <!--android:inputType="textCapSentences"/>-->
+
+    <!--<com.squareup.register.widgets.list.EditQuantityRow-->
+        <!--android:id="@id/edit_quantity_row"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/marin_gutter_half"-->
+        <!--android:layout_marginRight="@dimen/marin_gutter_half"-->
+        <!--android:layout_marginTop="@dimen/marin_gap_small"/>-->
+</merge>

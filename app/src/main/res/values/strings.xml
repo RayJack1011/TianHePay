@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">智云付</string>
+    <string name="welcome_app_name">智 云 付</string>
+    <string name="welcome_app_name_en">M o b i l e   P a y</string>
+
+    <string name="drawer_left_home">柜台</string>
+    <string name="drawer_left_bill_history">当日交易</string>
+    <string name="drawer_left_today_statistics">日结报表</string>
+    <string name="drawer_left_pos">手工补录</string>
+    <string name="drawer_left_refund">退货处理</string>
+    <string name="drawer_left_reprint">重打印微信/支付宝</string>
+    <string name="drawer_left_settings">设置</string>
+    <string name="drawer_left_about">关于</string>
+    <string name="drawer_header_szunic">联合智云</string>
+    <string name="drawer_header_szunic_ad">引领移动支付变革</string>
+    <string name="drawer_single">单品退货</string>
+    <string name="drawer_single_coupon">退券</string>
+
+    <!-- welcome start -->
+    <string name="welcome_update_title">发现新版本</string>
+    <string name="welcome_downloading_message">正在下载新版本...</string>
+    <!-- welcome end -->
+
+    <!-- login start -->
+    <string name="login_label">智云付帐号</string>
+    <string name="login_footer">服务支持: 深圳市联合智云科技有限公司</string>
+    <string name="login_account_hint">帐号</string>
+    <string name="login_password_hint">密码</string>
+    <string name="login_login">登录</string>
+    <string name="login_register">注册</string>
+    <string name="login_forget">忘记密码</string>
+    <string name="login_failed_tips">登录失败!</string>
+    <string name="error_login_account_empty">请输入帐号</string>
+    <string name="error_login_password_empty">请输入密码</string>
+    <string name="modify_pwd">修改密码</string>
+    <!-- login end -->
+
+    <!-- home start -->
+    <string name="keypad_panel_add_goods">选择条码</string>
+    <string name="cart_actionbar_label">当前购买</string>
+    <string name="subtotal_and_charge_button">结算 ¥ %1$s</string>
+    <string name="home_select_goods_dialog_title">请选择商品</string>
+    <string name="home_empty_cart_dialog_title">清空购物车</string>
+    <string name="home_empty_cart_dialog_content">是否清空选购商品?</string>
+    <string name="home_empty_cart_dialog_ok">清空</string>
+    <string name="home_empty_cart_dialog_cancel">取消</string>
+    <string name="error_home_select_goods_null">请选择商品条码!</string>
+    <string name="error_cart_empty">购物车空空的!</string>
+    <!-- home end -->
+
+    <!-- checkout start -->
+    <string name="checkout_order_total_label">订单总额:</string>
+    <string name="checkout_order_discount_label">折扣:</string>
+    <string name="checkout_order_total_due_label">应付总额:</string>
+    <string name="checkout_calculating_message">正在生成订单...</string>
+    <string name="error_checkout_calculate_fail_title">生成订单失败</string>
+    <string name="error_checkout_calculate_fail_content">请再次尝试生成订单,或取消该订单</string>
+    <string name="checkout_try_again_calculate">再试一次</string>
+    <string name="checkout_cancel_calculate">取消订单</string>
+    <string name="checkout_cancel_order_title">取消订单</string>
+    <string name="checkout_cancel_order_with_paidInfo">已经有支付信息, 取消改订单需要到柜台退款!</string>
+    <string name="checkout_cancel_order_yes">取消订单</string>
+    <string name="checkout_cancel_order_no">考虑一下</string>
+    <!-- checkout end -->
+
+    <!-- payment start -->
+    <string name="payment_ali">支付宝支付</string>
+    <string name="payment_wechat">微信支付</string>
+    <string name="payment_unionpay">银联支付</string>
+    <string name="payment_coupon">现金券支付</string>
+    <string name="payment_storedvalue_card">储值卡支付</string>
+    <string name="payment_cash">现金支付</string>
+    <string name="pay_pending_amount">待付金额 ¥ %.2f</string>
+    <string name="error_pay_zero_amount">请输入支付金额!</string>
+    <!-- payment end -->
+
+    <!-- cart start -->
+    <string name="item_cart_price">单价: %1$s</string>
+    <string name="item_cart_discount">折扣: %1$s</string>
+    <string name="item_cart_quantity">数量: %1$d</string>
+    <!-- cart end -->
+
+    <!-- settings start -->
+    <string name="settings_current_sn">当前可用流水号 %1$s</string>
+    <!-- settings end -->
+
+    <!-- order history start -->
+    <string name="item_order_history_saleno">单号: %1$s</string>
+    <string name="item_order_history_time">时间: %1$s</string>
+    <string name="item_order_history_total">订单总额: %1$s</string>
+    <string name="item_order_history_discount">折扣: %1$s</string>
+
+    <string name="order_history_refund_cancel_title">终止退货操作</string>
+    <string name="order_history_refund_cancel_with_paid">已有退款产生, 中途终止退货将产生单边帐!</string>
+    <string name="order_history_refund_cancel_yes">终止退货</string>
+    <string name="order_history_refund_cancel_no">继续退货</string>
+    <!-- order history end -->
+
+    <!-- refund start -->
+    <string name="refunded_total">已退金额: %1$s</string>
+    <!-- refund end -->
+
+    <string name="dialog_ok_default">确定</string>
+    <string name="dialog_cancel_default">取消</string>
+
+    <string name="keypad_panel_text_backspace">Backspace</string>
+    <string name="keypad_panel_button_backspace">Backspace Button</string>
+    <string name="keypad_panel_text_clear">Clear</string>
+    <string name="keypad_panel_button_clear">Clear Button</string>
+    <string name="keypad_panel_text_cancel">Cancel</string>
+    <string name="keypad_panel_button_cancel">Cancel Button</string>
+    <string name="keypad_panel_text_skip">Skip</string>
+    <string name="keypad_panel_text_submit">Submit</string>
+    <string name="keypad_panel_button_submit">Submit Button</string>
+    <string name="keypad_panel_text_decimal">Decimal</string>
+    <string name="keypad_panel_button_decimal">Decimal Button</string>
+    <string name="keypad_panel_text_00">00</string>
+    <string name="keypad_panel_button_00">Double Zero Button</string>
+
+    <string name="keypad_panel_text_0">0</string>
+    <string name="keypad_panel_button_0">Zero Button</string>
+    <string name="keypad_panel_text_1">1</string>
+    <string name="keypad_panel_button_1">One Button</string>
+    <string name="keypad_panel_text_2">2</string>
+    <string name="keypad_panel_button_2">Two Button</string>
+    <string name="keypad_panel_text_3">3</string>
+    <string name="keypad_panel_button_3">Three Button</string>
+    <string name="keypad_panel_text_4">4</string>
+    <string name="keypad_panel_button_4">Four Button</string>
+    <string name="keypad_panel_text_5">5</string>
+    <string name="keypad_panel_button_5">Five Button</string>
+    <string name="keypad_panel_text_6">6</string>
+    <string name="keypad_panel_button_6">Six Button</string>
+    <string name="keypad_panel_text_7">7</string>
+    <string name="keypad_panel_button_7">Seven Button</string>
+    <string name="keypad_panel_text_8">8</string>
+    <string name="keypad_panel_button_8">Eight Button</string>
+    <string name="keypad_panel_text_9">9</string>
+    <string name="keypad_panel_button_9">Nine Button</string>
+
+    <string name="keypad_panel_text_plus">Plus</string>
+    <string name="keypad_panel_button_plus">Plus Button</string>
+    <string name="RefundableTotalAmount">可退款金额: %1$s</string>
+
+    <string name="today_return">当日撤销</string>
+    <string name="yesterday_return">隔日退货</string>
+
+    <string name="delete_stock">温馨提示</string>
+
+    <string name="test_delete">你确定要删除该商品</string>
+    <string name="test_deletes">确定清空购物车</string>
+    <string name="cancler">取消</string>
+    <string name="sure">确认</string>
+
+
+</resources>

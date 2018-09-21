@@ -1,0 +1,150 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.neenbedankt.android-apt'
+//apply plugin: 'org.greenrobot.greendao'
+
+//获取生成的产品名
+def getProductName() {
+    return "tianhe"
+}
+
+//获取打包的时间
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+//    def globalConfig = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.tianhe.pay"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 43
+        versionName "1.4.3"
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+//        testApplicationId "com.tianhe.pay.test"
+        multiDexEnabled true
+    }
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+        disable 'InvalidPackage'            //Some libraries have issues with this.
+        disable 'OldTargetApi'
+        //Lint gives this warning but SDK 20 would be Android L Beta.
+        disable 'IconDensities'             //For testing purpose. This is safe to remove.
+        disable 'IconMissingDensityFolder'  //For testing purpose. This is safe to remove.
+    }
+    signingConfigs {
+        release {
+            storeFile
+            storePassword
+            keyAlias
+            keyPassword
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release {
+            //开起混淆
+//            minifyEnabled true
+            minifyEnabled false
+            //移除无用资源
+//            shrinkResources true
+//            压缩
+            zipAlignEnabled true
+            //指定混淆规则，需要压／缩／优化的混淆要把proguard-android.txt换成proguard-android.txt
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "${getProductName()}_v${variant.versionName}_${releaseTime()}_${variant.name}.apk"
+        }
+    }
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
+    }
+}
+
+//配置打包签名
+File propFile = file('../buildsystem/signing.properties')
+if (propFile.exists()) {
+    Properties props = new Properties()
+    props.load(new FileInputStream(propFile))
+    if (props.containsKey('STORE_FILE') && props.containsKey('STORE_PASSWORD')
+            && props.containsKey('KEY_ALIAS') && props.containsKey('KEY_PASSWORD')) {
+        android.signingConfigs.release.storeFile = file(props['STORE_FILE'])
+        android.signingConfigs.release.storePassword = props['STORE_PASSWORD']
+        android.signingConfigs.release.keyAlias = props['KEY_ALIAS']
+        android.signingConfigs.release.keyPassword = props['KEY_PASSWORD']
+    } else {
+        println("sign file has not contain key!")
+        android.buildTypes.release.signingConfig = null
+    }
+} else {
+    println("sign file not exist!")
+    android.buildTypes.release.signingConfig = null
+}
+
+dependencies {
+    def appDep = rootProject.ext.appDependencies
+    def appTestDep = rootProject.ext.appTestDependencies
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile appDep.appcompatV7
+    compile appDep.design
+    compile appDep.recyclerview
+    compile appDep.cardview
+    compile appDependencies.lifecycle
+    compile appDep.gson
+    compile appDep.rxjava2
+    compile appDep.rxjava2Android
+    compile appDep.retrofit2
+    compile appDep.retrofit2Rxjava2Adapter
+    compile appDep.retrofit2ConverterGson
+    compile appDep.rxrelay2
+    compile appDep.rxdownload2
+    annotationProcessor appDep.dagger2Compiler
+    compile appDep.ormlite
+    compile appDep.dagger2
+    compile appDep.dagger2android
+    compile appDep.dagger2androidsupprot
+    annotationProcessor appDep.dagger2androidCompiler
+    //    annotationProcessor appDep.butterknifeCompiler
+    //    compile appDep.butterknife
+    compile appDep.timber
+    compile(appDep.materialDialog, {
+        exclude group: 'com.android.support'
+    })
+    releaseCompile appDep.leakcanary
+    compile appDep.stetho
+    compile appDep.okhttp3LoggingInterceptor
+    testCompile appTestDep.leakcanary
+    debugCompile appDep.leakcanary
+    testCompile appTestDep.junit
+    testCompile appTestDep.mockito
+    androidTestCompile appTestDep.assertj
+    androidTestCompile(appTestDep.espresso, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile files('libs/meSdk-3.1.0-SNAPSHOT.jar')
+    compile files('libs/ksoap2-android-assembly-3.0.0-jar-with-dependencies.jar')
+//    compile project(':zbar')
+    compile('com.thoughtworks.xstream:xstream:1.4.7') {
+        exclude group: 'xmlpull', module: 'xmlpull'
+        exclude group: 'xpp3', module: 'xpp3_min'
+    }
+    compile 'org.xutils:xutils:3.3.22'
+    //    implementation files('libs/sdkserviceapi.jar')
+    implementation files('libs/openbeans-1.0.jar')
+    compile 'com.android.support:multidex:1.0.0'
+    implementation project(':zxing')
+    compile 'com.zhy:okhttputils:2.6.2'
+}

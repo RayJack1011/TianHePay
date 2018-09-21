@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/Material.Standard.Double"
+    android:paddingBottom="@dimen/Material.Standard.Double"
+    android:layout_marginLeft="@dimen/Material.Standard.Quadruple"
+    android:layout_marginRight="@dimen/Material.Standard.Quadruple"
+    >
+
+    <TextView
+        android:id="@+id/fragment_cart_item_price_ori"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="原单价 $ 0.01"
+        android:textColor="@color/text_primary_dark"
+        android:textSize="@dimen/TextSize.Material.Title"/>
+
+    <TextView
+        android:id="@+id/fragment_cart_item_price_now"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="现单价 $ 0.01"
+        android:textColor="@color/text_primary_dark"
+        android:textSize="@dimen/TextSize.Material.Title"/>
+
+    <TextView
+        android:id="@+id/fragment_cart_item_price_label"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:text="修改单价"
+        android:textColor="@color/text_primary_dark"
+        android:textSize="@dimen/TextSize.Material.Title"/>
+
+    <EditText
+        android:id="@+id/fragment_cart_item_price"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/edittext_underline_bg"
+        android:text="$ 0.02"
+        android:textColor="@color/text_primary_dark"
+        android:inputType="numberDecimal"
+        android:textSize="@dimen/TextSize.Material.Headline"/>
+
+
+    <TextView
+        android:id="@+id/fragment_cart_item_quantity_label"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/Material.Standard.Double"
+        android:text="数量"
+        android:textColor="@color/text_primary_dark"
+        android:textSize="@dimen/TextSize.Material.Title"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_cart_item_modify_quantity_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginTop="@dimen/Material.Standard"
+        >
+        <ImageView
+            android:id="@+id/fragment_cart_item_quantity_reduce"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:src="@drawable/ic_reduce"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <EditText
+                android:id="@+id/fragment_cart_item_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/Material.Standard.Quadruple"
+                android:layout_marginRight="@dimen/Material.Standard.Quadruple"
+                android:gravity="center"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="number"
+                android:text="1"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/fragment_cart_item_quantity_add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:src="@drawable/ic_add"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/fragment_cart_item_remove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/Material.Standard.Quadruple"
+        android:background="@drawable/bg_corner"
+        android:text="删除"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/TextSize.Material.Title"
+        />
+</LinearLayout>

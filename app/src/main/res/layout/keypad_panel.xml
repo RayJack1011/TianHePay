@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:pay="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/keypad_top_bar_height"
+        android:gravity="center_vertical">
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/keypad_panel_add_barcode"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_weight="1.0"-->
+            <!--android:background="@drawable/marin_selector_list"-->
+            <!--android:gravity="center|left"-->
+            <!--android:hint="@string/keypad_panel_add_goods"-->
+            <!--android:textSize="24sp"-->
+            <!--android:maxLines="1"-->
+            <!--android:paddingLeft="@dimen/Material.Standard.Double"-->
+            <!--android:textColorHint="@color/marin_light_gray"-->
+            <!--android:visibility="gone"-->
+            <!--/>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="right"
+            android:text="单价"
+            android:textColor="@color/marin_dark_gray"
+            android:textSize="@dimen/TextSize.Material.Title"
+            />
+
+        <TextView
+            android:id="@+id/keypad_panel_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/Material.Standard"
+            android:layout_marginRight="@dimen/Material.Standard"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="right"
+            android:textColor="@color/marin_dark_gray"
+            android:textSize="@dimen/marin_text_headline"
+            android:text="0.00"
+            />
+    </LinearLayout>
+
+    <com.tianhe.pay.widget.padlock.Padlock
+        android:id="@+id/keypad_panel_padview"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        pay:buttonSelector="@drawable/marin_selector_keypad"
+        pay:digitColor="@color/marin_dark_gray"
+        pay:lineColor="@color/marin_light_gray"
+        pay:submitColor="@color/prompt_color"
+        pay:submitSelector="@drawable/marin_selector_keypad"
+        pay:submitType="add"
+        />
+</LinearLayout>

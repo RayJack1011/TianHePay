@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:square="http://schemas.android.com/apk/res-auto">
+
+    <!--<com.squareup.marin.widgets.MarinActionBarView-->
+        <!--android:id="@id/action_bar"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:theme="@style/Theme.Marin.ActionBar.UltraLightGray"/>-->
+
+    <!--<com.squareup.ui.PadlockLinearLayout-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:weightSum="2.0">-->
+
+        <!--<com.squareup.padlock.Padlock-->
+            <!--android:id="@id/keypad"-->
+            <!--android:layout_width="0.0dip"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_weight="1.0"-->
+            <!--square:buttonSelector="@drawable/marin_selector_keypad"-->
+            <!--square:digitColor="@color/marin_dark_gray"-->
+            <!--square:drawRightLine="true"-->
+            <!--square:drawTopLine="false"-->
+            <!--square:lineColor="@color/marin_light_gray"-->
+            <!--square:submitType="none"/>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0.0dip"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_weight="1.0"-->
+            <!--android:background="@drawable/marin_clear_border_bottom_light_gray_1px"-->
+            <!--android:gravity="center|right"-->
+            <!--android:orientation="vertical"-->
+            <!--android:paddingLeft="@dimen/marin_gutter_half"-->
+            <!--android:paddingRight="@dimen/marin_gutter">-->
+
+            <!--<com.squareup.widgets.ScalingTextView-->
+                <!--android:id="@id/price_field"-->
+                <!--style="@style/TextAppearance.Marin.Keypad"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="right"-->
+                <!--android:maxLines="1"/>-->
+        <!--</LinearLayout>-->
+    <!--</com.squareup.ui.PadlockLinearLayout>-->
+</merge>

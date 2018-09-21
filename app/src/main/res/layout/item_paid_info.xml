@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="8.0dip"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <!-- 支付方式名称  -->
+        <TextView
+            android:id="@+id/item_paid_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微信支付"
+            android:textColor="@color/text_primary_dark"
+            />
+
+        <TextView
+            android:id="@+id/item_paid_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/Material.Standard"
+            android:text="120.10"
+            android:textColor="@color/text_primary_dark"
+            android:textIsSelectable="true"
+            />
+    </LinearLayout>
+
+    <!-- 支付信息中的关联号码  -->
+    <TextView
+        android:id="@+id/item_paid_relNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关联号码: 124555333333"
+        android:paddingLeft="@dimen/Material.Standard.Double"
+        android:textColor="@color/text_primary_dark"
+        />
+
+</LinearLayout>

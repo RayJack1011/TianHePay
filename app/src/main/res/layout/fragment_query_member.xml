@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/white_nearby"
+              android:divider="@android:drawable/divider_horizontal_bright"
+              android:minWidth="300dp"
+              android:orientation="vertical"
+              android:showDividers="middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fragment_query_card_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/Material.Standard.Double"
+            android:layout_marginTop="@dimen/Material.Standard.Double"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/Material.Standard.Quadruple"
+            android:text="会员查询"
+            android:textColor="@color/text_primary_dark"
+            android:textSize="@dimen/TextSize.Material.Title"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:id="@+id/fragment_query_card_number_container"
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/Material.Standard.Quadruple"
+                android:text="号码"
+                android:textColor="@color/text_primary_dark"/>
+
+            <EditText
+                android:id="@+id/fragment_query_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="@dimen/Material.Standard.Quadruple"
+                android:layout_marginRight="@dimen/Material.Standard.Quadruple"
+                android:hint="请刷卡或输入卡号"
+                android:imeOptions="flagNoExtractUi|actionDone"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/text_blue"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fragment_query_card_tips"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/Material.Standard.Quadruple"
+            android:layout_marginRight="@dimen/Material.Standard.Quadruple"
+            android:gravity="center"
+            android:text="正在启动刷卡设备..."
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:drawable/divider_horizontal_bright"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <Button
+            android:id="@+id/fragment_query_card_cancel_btn"
+            style="@android:style/Widget.Holo.Light.Button.Borderless.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="取消"
+            android:textColor="@color/text_secondary_dark"/>
+
+        <Button
+            android:id="@+id/fragment_query_card_ok_btn"
+            style="@android:style/Widget.Holo.Light.Button.Borderless.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="确定"
+            android:textColor="@color/text_blue"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+allprojects {
+    repositories {
+//        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        jcenter()
+        google()
+    }
+}
+
+ext {
+    // Sdk and tools
+    minSdkVersion = 17
+    targetSdkVersion = 26
+    compileSdkVersion = 26
+    buildToolsVersion = '26.0.2'
+
+    // App dependencies
+//    supportVersion = "25.2.0"
+    supportVersion = "26.1.0"
+    gsonVersion = "2.8.0"
+
+    // rxJava
+    rxjavaVersion = "2.1.5"
+    rxjavaAndroidVersion = "2.0.1"
+    rxrelayVersion = "2.0.0"
+    retrofitVersion = "2.3.0"
+    retrofitRxjavaAdapterVersion = "1.0.0"
+    retrofitConverterGsonVersion = "2.3.0"
+    rxdownload2Version = "2.0.2"
+
+    // inject
+    daggerVersion = "2.12"
+    butterknifeVersion = "8.4.0"
+
+    // orm
+    greendaoVersion = '3.2.2'
+    ormliteVersion = '5.0'
+
+    timberVersion = "4.5.1"
+    materialDialogVersion = "0.9.5.0"
+
+    leakcanaryVersion = "1.5"
+    stethoVersion = "1.4.1"
+    okhttp3LoggingInterceptorVersion = "3.4.2"
+
+    junitVersion = "4.12"
+    mockitoVersion = "1.9.5"
+    robolectricVersion = "3.0"
+    assertjVersion = "1.7.1"
+    espressoVersion = "2.2.2"
+    lifecycleVersion = "1.0.0"
+
+    appDependencies = [
+            appcompatV7              : "com.android.support:appcompat-v7:${supportVersion}",
+            design                   : "com.android.support:design:${supportVersion}",
+            recyclerview             : "com.android.support:recyclerview-v7:${supportVersion}",
+            cardview                 : "com.android.support:cardview-v7:${supportVersion}",
+            gson                     : "com.google.code.gson:gson:${gsonVersion}",
+            rxjava2                  : "io.reactivex.rxjava2:rxjava:${rxjavaVersion}",
+            rxjava2Android           : "io.reactivex.rxjava2:rxandroid:${rxjavaAndroidVersion}",
+            rxrelay2                 : "com.jakewharton.rxrelay2:rxrelay:${rxrelayVersion}",
+            retrofit2                : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofit2Rxjava2Adapter  : "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${retrofitRxjavaAdapterVersion}",
+            retrofit2ConverterGson   : "com.squareup.retrofit2:converter-gson:${retrofitConverterGsonVersion}",
+            rxdownload2              : "zlc.season:rxdownload2:${rxdownload2Version}",
+            dagger2                  : "com.google.dagger:dagger:${daggerVersion}",
+            dagger2Compiler          : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger2android           : "com.google.dagger:dagger-android:${daggerVersion}",
+            dagger2androidsupprot    : "com.google.dagger:dagger-android-support:${daggerVersion}",
+            dagger2androidCompiler   : "com.google.dagger:dagger-android-processor:${daggerVersion}",
+            greendao                 : "org.greenrobot:greendao:${greendaoVersion}",
+            ormlite                  : "com.j256.ormlite:ormlite-android:${ormliteVersion}",
+            butterknife              : "com.jakewharton:butterknife:${butterknifeVersion}",
+            butterknifeCompiler      : "com.jakewharton:butterknife-compiler:${butterknifeVersion}",
+            timber                   : "com.jakewharton.timber:timber:${timberVersion}",
+            materialDialog           : "com.afollestad.material-dialogs:core:${materialDialogVersion}",
+            leakcanary               : "com.squareup.leakcanary:leakcanary-android-no-op:${leakcanaryVersion}",
+            stetho                   : "com.facebook.stetho:stetho-okhttp3:${stethoVersion}",
+            okhttp3LoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${okhttp3LoggingInterceptorVersion}",
+            lifecycle                : "android.arch.lifecycle:extensions:${lifecycleVersion}",
+    ]
+    appTestDependencies = [
+            junit      : "junit:junit:${junitVersion}",
+            assertj    : "org.assertj:assertj-core:${assertjVersion}",
+            mockito    : "org.mockito:mockito-core:${mockitoVersion}",
+            robolectric: "org.robolectric:robolectric:${robolectricVersion}",
+            espresso   : "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+            leakcanary : "com.squareup.leakcanary:leakcanary-android:${leakcanaryVersion}",
+    ]
+}

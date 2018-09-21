@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/marin_ultra_light_gray_inline_button_disabled"
+    app:titleMarginStart="@dimen/Material.Standard.Double">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="选购商品"
+        android:gravity="center"
+        android:textColor="@color/btn_dark"
+        android:textSize="18sp"/>
+    <LinearLayout
+        android:id="@+id/cart_header_current_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/cart_header_current_sale_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dip"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/cart_actionbar_label"
+            android:textSize="@dimen/TextSize.Material.Title"
+            />
+
+        <TextView
+            android:id="@+id/cart_header_sale_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6.0dp"
+            android:background="@drawable/marin_cart_quantity_tile"
+            android:freezesText="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textSize="11dp"
+            android:textStyle="bold"
+            android:text="0"
+            android:textColor="#ffff4444"
+            />
+    </LinearLayout>
+</android.support.v7.widget.Toolbar>

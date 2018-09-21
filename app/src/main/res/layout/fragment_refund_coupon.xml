@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white_nearby"
+    android:divider="@android:drawable/divider_horizontal_bright"
+    android:minWidth="300dp"
+    android:orientation="vertical"
+    android:showDividers="middle" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/Material.Standard.Double"
+			android:layout_marginBottom="@dimen/Material.Standard.Double"
+			android:gravity="center_vertical"
+			>
+			<TextView
+				android:id="@+id/fragment_query_card_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingLeft="@dimen/Material.Standard.Quadruple"
+				android:layout_centerVertical="true"
+				android:textColor="@color/text_primary_dark"
+				android:textStyle="bold"
+				android:textSize="@dimen/TextSize.Material.Title"
+				android:text="现金券查询"
+				/>
+
+			<ImageButton
+				android:id="@+id/fragment_query_card_scan"
+				android:layout_width="@dimen/button_height_min"
+				android:layout_height="@dimen/button_height_min"
+				android:layout_marginRight="@dimen/Material.Standard.Quadruple"
+				android:background="@drawable/ic_scan"
+				android:layout_centerVertical="true"
+				android:gravity="center"
+				android:layout_alignParentRight="true"
+				android:textSize="@dimen/TextSize.Material.Title"
+				android:textColor="@color/text_primary_dark"
+				android:text="扫码"
+				android:visibility="invisible"
+				/>
+
+		</RelativeLayout>
+        <LinearLayout
+			android:id="@+id/fragment_query_card_number_container"
+            android:layout_width="match_parent"
+        	android:layout_height="112dp"
+        	android:gravity="center"
+        	android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:paddingLeft="@dimen/Material.Standard.Quadruple"
+	            android:textColor="@color/text_primary_dark"
+	            android:text="号码" />
+            <EditText
+	            android:id="@+id/fragment_query_card_number"
+	            android:layout_width="match_parent"
+	            android:layout_height="48dp"
+	            android:layout_marginLeft="@dimen/Material.Standard.Quadruple"
+	            android:layout_marginRight="@dimen/Material.Standard.Quadruple"
+	            android:inputType="number"
+				android:maxLines="1"
+	            android:imeOptions="flagNoExtractUi"
+				android:textColor="@color/text_blue"
+	            android:hint="请输入券号"
+	            />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:drawable/divider_horizontal_bright"
+        android:orientation="horizontal"
+        android:showDividers="middle" >
+
+        <Button
+            android:id="@+id/fragment_query_card_cancel_btn"
+            style="@android:style/Widget.Holo.Light.Button.Borderless.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="取消"
+            android:textColor="@color/text_secondary_dark" />
+
+        <Button
+            android:id="@+id/fragment_query_card_ok_btn"
+            style="@android:style/Widget.Holo.Light.Button.Borderless.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="确定"
+            android:textColor="@color/text_blue" />
+    </LinearLayout>
+
+</LinearLayout>

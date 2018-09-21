@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_home"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/fragment_home_vip_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_vip"/>
+
+        <TextView
+            android:id="@+id/fragment_home_vip_no"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:text="188777373737" />
+
+        <ImageView
+            android:id="@+id/fragment_home_vip_delete"
+            android:layout_width="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_delete_vip" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/Material.Standard.Double" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:paddingBottom="10dp"
+            android:background="@color/gray_light">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="fill_parent"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:text="条码"
+                android:textColor="@color/marin_dark_gray"
+                android:textColorHint="@color/marin_dark_gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/keypad_panel_add_barcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/Material.Standard.Double"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/edittext_underline_bg"
+                android:drawableRight="@drawable/ic_down_arr"
+                android:gravity="center|left"
+                android:hint="@string/keypad_panel_add_goods"
+                android:maxLines="1"
+                android:minHeight="@dimen/button_height_min"
+                android:textColor="@color/marin_dark_gray"
+                android:textColorHint="@color/marin_light_gray"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/Material.Standard.Double" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_light"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="原价"
+                    android:textColor="@color/marin_dark_gray"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/keypad_panel_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="@dimen/Material.Standard.Double"
+                    android:hint="0.00"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/marin_dark_gray"
+                    android:textSize="22sp" />
+                <!--android:background="@drawable/edittext_underline_bg"-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="折后价"
+                    android:textColor="@color/marin_dark_gray"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/keypad_panel_discount_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="@dimen/Material.Standard.Double"
+                    android:hint="0.00"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/marin_dark_gray"
+                    android:textSize="22sp" />
+                <!--android:background="@drawable/edittext_underline_bg"-->
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_cart_item_modify_quantity_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/Material.Standard.Double"
+            android:minHeight="48dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:gravity="right"
+                android:text="折后价"
+                android:textColor="@color/marin_dark_gray"
+                android:textSize="@dimen/TextSize.Material.Title" />
+
+            <ImageView
+                android:id="@+id/fragment_cart_item_quantity_reduce"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/Material.Standard.Double"
+                android:gravity="center"
+                android:src="@drawable/ic_reduce"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/fragment_cart_item_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/Material.Standard.Quadruple"
+                    android:layout_marginRight="@dimen/Material.Standard.Quadruple"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="number"
+                    android:text="1" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/fragment_cart_item_quantity_add"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:src="@drawable/ic_add"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="250dp">-->
+    <!--<include-->
+    <!--android:id="@+id/fragment_home_keypad"-->
+    <!--layout="@layout/keypad_panel"-->
+    <!--/>-->
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/Material.Standard"
+        android:layout_marginTop="@dimen/Material.Standard.Quadruple">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:cardBackgroundColor="@color/btn_blue">
+
+            <Button
+                android:id="@+id/fragment_home_add_item"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:background="@null"
+                android:text="加入购物车"
+                android:textColor="@color/white"
+                android:textSize="@dimen/TextSize.Material.Body" />
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/gray_light"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:text="最近购买"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/item_cart" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/Material.Standard.Double"
+            android:gravity="center"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/text_primary_dark">
+
+            <Button
+                android:id="@+id/fragment_home_clear_button"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/button_height_Large"
+                android:layout_gravity="bottom"
+                android:background="@null"
+                android:maxLines="1"
+                android:text="清除"
+                android:textColor="@color/white"
+                android:textSize="@dimen/TextSize.Material.Body" />
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_light"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/goods_infos"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="0件商品，共计0.00元"
+                android:textSize="12sp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_vertical"
+                app:cardBackgroundColor="@color/tianhe_red">
+
+                <Button
+                    android:id="@+id/fragment_home_charge_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:background="@null"
+                    android:maxLines="1"
+                    android:text="@string/subtotal_and_charge_button"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+

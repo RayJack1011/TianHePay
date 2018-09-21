@@ -1,0 +1,161 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/text_primary_dark</item>
+    </style>
+
+    <style name="AppTheme" parent="@style/AppBaseTheme">
+        <item name="android:colorBackground">@color/white_nearby</item>
+        <item name="android:windowBackground">@color/white_nearby</item>
+        <item name="android:actionBarStyle">@style/AppTheme.ActionBar</item>
+        <item name="android:actionOverflowButtonStyle">@style/Widget.AppCompat.ActionButton.Overflow</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_actionbar_back</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeStyle">@style/AppTheme.ActionMode</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="android:background">@color/white_nearby</item>
+        <item name="android:displayOptions">showTitle</item>
+        <item name="android:titleTextStyle">@style/Text.ActionBar.Title</item>
+        <item name="android:actionMenuTextColor">@color/text_primary_dark</item>
+        <item name="actionOverflowButtonStyle">@style/Widget.AppCompat.ActionButton.Overflow</item>
+    </style>
+
+    <style name="AppTheme.ActionMode" parent="@style/Widget.AppCompat.ActionMode">
+        <item name="background">@color/white_gray</item>
+    </style>
+    <style name="AppTheme.DarkSpinner" parent="@style/AppBaseTheme">
+        <item name="dropDownListViewStyle">@style/SpinnerStyle</item>
+    </style>
+
+    <style name="Activity.DialogBase" parent="@style/Theme.AppCompat.Dialog" />
+
+    <style name="Activity.Dialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:colorBackground">@color/white_nearby</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+        <item name="android:windowBackground">@color/white_nearby</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="SpinnerStyle" parent="@style/Base.Widget.AppCompat.Spinner">
+        <item name="android:divider">@color/Divider_Dark</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:popupBackground">@android:drawable/spinner_background</item>
+    </style>
+
+
+    <style name="Text.Standard" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@color/text_primary_dark</item>
+    </style>
+    <style name="Text.Material.Body" parent="@android:style/TextAppearance.Small">
+    </style>
+    <style name="Text.Material.Headline" parent="@style/Text.Standard">
+        <item name="android:textSize">@dimen/TextSize.Material.Headline</item>
+    </style>
+    <style name="Text.Material.Subhead" parent="@style/Text.Standard">
+        <item name="android:textSize">@dimen/TextSize.Material.Subhead</item>
+    </style>
+    <style name="Text.Material.Caption" parent="@style/Text.Standard">
+        <item name="android:textSize">@dimen/TextSize.Material.Caption</item>
+    </style>
+
+    <style name="Text.ActionBar.Title" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/text_primary_dark</item>
+    </style>
+
+
+    <style name="EditText.Base" parent="Text.Material.Body">
+        <item name="android:background">@drawable/bg_corner</item>
+        <item name="android:textColor">@color/black_light</item>
+        <item name="android:paddingLeft">@dimen/Material.Standard</item>
+        <item name="android:paddingRight">@dimen/Material.Standard</item>
+    </style>
+
+    <style name="Button.Base" parent="Text.Material.Body">
+    </style>
+
+
+    <style name="ToolbarShadow">
+        <item name="android:background">@drawable/toolbar_shadow</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">5dp</item>
+    </style>
+
+    <!-- Welcome start -->
+
+    <!-- Welcome end -->
+
+    <!-- Login start -->
+    <style name="Login.Edit" parent="@style/EditText.Base" />
+
+    <style name="Login.Login" parent="@style/Text.Material.Body">
+        <!--<item name="android:elevation">5dp</item>-->
+    </style>
+    <!-- Login end -->
+
+
+    <style name="OrderHistoryDetail.Text" parent="@style/Text.Standard">
+        <item name="android:minHeight">32.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="OrderHistoryDetail.Label" parent="@style/OrderHistoryDetail.Text">
+        <item name="android:textSize">@dimen/TextSize.Material.Subhead</item>
+        <item name="android:paddingLeft">12.0dip</item>
+    </style>
+    <style name="OrderHistoryDetail.Body" parent="@style/OrderHistoryDetail.Text">
+        <item name="android:textSize">@dimen/TextSize.Material.Subhead</item>
+        <item name="android:textColor">@color/text_primary_dark</item>
+        <item name="android:paddingRight">12.0dip</item>
+    </style>
+
+
+    <!-- setting -->
+    <style name="pref_item_thin_line">
+        <item name="android:background">#FFE5E5E5</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:minHeight">1px</item>
+    </style>
+
+    <style name="MyDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="CustomDialogStyle" parent="@android:style/Theme.Dialog">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 背景模糊 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 允许对话框的背景变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 字体颜色 -->
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:editTextColor">@color/text_light</item>
+    </style>
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="BottomDialog" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>
